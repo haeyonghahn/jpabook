@@ -47,4 +47,5 @@ public class JpaMain {
         //삭제
         em.remove(member);
     }
+    
 }
