@@ -9,5 +9,6 @@
   	<module>ch04-jpa-start2</module>
   	<module>ch04-model1</module>
   	<module>ch04-model2</module>
+  	<module>ch06-model3</module>
   </modules>
 </project>
