@@ -1,4 +1,4 @@
-package com.springframework.jpabook;
+package com.springframework.jpabook.model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
