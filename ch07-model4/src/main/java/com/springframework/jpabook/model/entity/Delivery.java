@@ -1,27 +1,29 @@
 package com.springframework.jpabook.model.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Member extends BaseEntity {
+public class Delivery {
 
 	@Id @GeneratedValue
-	@Column(name = "MEMBER_ID")
+	@Column(name = "DELIVERY_ID")
 	private Long id;
-	private String name;
+	
+	@OneToOne(mappedBy = "delivery")
+	private Order order;
+	
 	private String city;
 	private String street;
 	private String zipcode;
 	
-	@OneToMany(mappedBy = "member")
-	private List<Order> orders = new ArrayList<Order>();
+	@Enumerated(EnumType.STRING)
+	private DeliveryStatus status;
 
 	public Long getId() {
 		return id;
@@ -31,12 +33,12 @@ public class Member extends BaseEntity {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public Order getOrder() {
+		return order;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setOrder(Order order) {
+		this.order = order;
 	}
 
 	public String getCity() {
@@ -63,11 +65,11 @@ public class Member extends BaseEntity {
 		this.zipcode = zipcode;
 	}
 
-	public List<Order> getOrders() {
-		return orders;
+	public DeliveryStatus getStatus() {
+		return status;
 	}
 
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
+	public void setStatus(DeliveryStatus status) {
+		this.status = status;
 	}
 }
