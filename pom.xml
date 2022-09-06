@@ -12,5 +12,6 @@
   	<module>ch06-model3</module>
   	<module>ch07-model4</module>
   	<module>ch08-model5</module>
+  	<module>ch11-jpa-shop</module>
   </modules>
 </project>
