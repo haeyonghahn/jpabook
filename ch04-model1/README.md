@@ -1,4 +1,4 @@
-## 데이터 중심 설계의 문제점
+## 데이터 중심 설계와 객체 중심 설계의 
 ![uml상세](https://github.com/haeyonghahn/jpabook/blob/master/images/uml%EC%83%81%EC%84%B8.PNG)   
 
 ch04-model1의 엔티티 방식은 객체 설계를 테이블 설계에 맞춘 방법이다. 특히 테이블의 외래 키를 객체에 그대로 가져온 부분이 문제다. 왜냐하면, 
